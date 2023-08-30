@@ -1,0 +1,46 @@
+/* contenedor del grid */
+.contenedor{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    flex-wrap: wrap;
+    
+}
+/* bloque del tablero para jugar */
+.item1{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+/* bloque de los resultados */
+.item2{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    height: 100px;
+}
+/* bloque de las reglas de juego */
+.item3{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    background-color: rgb(255, 241, 47);
+    border: 2px solid rgba(71, 230, 9, 0.993);
+    display: block;
+}
+/* bloque de la imagen alusiva */
+.item4{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    background-image: url(/practico2/imagenes/fondopag.webp);
+    background-repeat: no-repeat;
+    background-size:contain;
+    border: 2px solid rgba(71, 230, 9, 0.993);
+    margin-left: 25%;
+}

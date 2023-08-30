@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practico 2</title>
+    <link rel="stylesheet" href="css/estilo1.css">
+    <link rel="stylesheet" href="css/estilogrid.css">
+</head>
+<body>
+    <!--titulo de la pagina-->
+    <center>
+    <div style="background-image: url(/practico2/imagenes/titulo1.jpg);">
+    <header class="titulo">
+        <h1 class="tit_text">Jugá con JORGE!!!</h1>
+        <h3 class="tit_text">Piedra, papel o tijera</h3>
+    </header>
+    </div>
+    </center>
+    <!--sección donde se ingresa el nombre del jugador-->
+    <div >
+        <div id="login" class="fondo_ingreso">
+            <h3 id="prueba">Ingrese su Nombre:</h3>
+            <input type="text" maxlength="20" id="nombre" required>
+            <div class="btn_acepta">
+                <div class="estado1">
+                    <button>Aceptar</button>
+                </div>
+                <div class="estado2">
+                    <button onclick="saludar();">Aceptar</button>
+                </div>
+            </div>
+        </div>
+       
+        <!--saludo al jugador-->
+        <h2  id="saludo" style="background-color: rgba(71, 230, 9, 0.993);"></h2>
+        <!-- grid -->    
+        <div class="contenedor">
+            <!--tablero con flex para elegir piedra, papel o tijeras-->
+            <div id="elige" class="tablero item1" >
+                <div class="flex">
+                <div class="cards">
+                    <div class="estado1">
+                        <button type="button" value="piedra">Piedra</button>
+                    </div>
+                    <div class="estado2 piedra">
+                        <button type="button" value="piedra"><img src="/practico2/imagenes/piedra.jpg"  id="piedra"></button>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="estado1">
+                        <button type="button" value="papel">Papel</button>
+                    </div>
+                    <div class="estado2 papel">
+                        <button type="button"><img src="/practico2/imagenes/papel.jpg"  id="papel"></button>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="estado1">
+                        <button type="button" value="tijeras">Tijeras</button>
+                    </div>
+                    <div class="estado2 tijeras">
+                        <button type="button" value="tijeras"><img src="/practico2/imagenes/tijeras.jpg"  id="tijeras"></button>
+                    </div>
+                </div>
+                </div>
+            </div>
+            
+            <div class="resultado item2" id="resultado"><!--resultado-->
+                <table>
+                    <tr>
+                        <td colspan="2" id="resul_js"></td>
+                    </tr>
+                    <tr>
+                        <td>Computadora:</td>
+                        <td id="gana_compu" style="color: blue;"></td>
+                    </tr>
+                    <tr>
+                        <td>Jugador</td>
+                        <td id="gana_jugador" style="color: blue;"></td>
+                    </tr>
+                </table>
+                <button type="button" onclick="reseteo();">Cancelar</button>
+            </div>
+
+            <div class="item3 reglas"><!--reglas-->
+                <p><u><b>Reglas:</b></u></p>
+                <p>1 - Se debe ingresar el nombre del jugador</p>
+                <p>2 - Elija Piedra, Papel o Tijeras</p>
+                <p>3 - Obtendrá el resultado de la jugada</p>
+                <p>4 - Piedra gana a Tijeras, Tijeras gana a Papel, y Papel gana a Piedra</p>
+                <p>5 - Si es Empate, vuelva a elegir hasta que uno gane la jugada</p>
+                <p>6 - Quien gane 3 jugadas de 5, será el Ganador Final!</p>
+                <p>7 - En la ventana emergente verá el resultado, presione aceptar y vuelva a jugar</p>
+                <p><i><b>A Divertirse!!!</b></i></p>
+            </div>
+            <!--foto alusiva al juego-->
+            <div class="item4" id="divfoto"></div>
+        </div>
+    </div>
+    <footer><!--footer-->
+        <h2>Desarrollado por: Agüero, Jorge Luis - agosto del 2023 - FAMAF, Argentina Programa tramo: 2</h2>
+        <p><a href="http://" target="_blank">GitHub</a></p>
+    </footer>
+    <script src="js/piedraPapelTijeras.js"></script>
+</body>
+</html>
